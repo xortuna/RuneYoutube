@@ -9,8 +9,8 @@ alias=RuneYoutube
 ### template - function: start message, installed check
 installstart $@
 
-### template - function: download uninstall file to /usr/local/bin (when not download master.zip)
-getuninstall
+### template - function: get repository zip and extract to system directories
+getinstallzip
 
 ### template - function: (optional) rank miror servers and 'pacman -Sy' before install packages
 rankmirrors
