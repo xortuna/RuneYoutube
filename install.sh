@@ -97,6 +97,17 @@ sed -i -e $'/<button id="pl-manage-save" class="btn btn-default" type="button" t
 </div>\
 <!-- END_RUNE_YOUTUBE_MOD -->' $file
 
+# for RuneUI Enhancement
+file=/srv/http/app/templates/playbackcustom.php
+if [[ -e $file ]]; then
+	echo $file
+	sed -i '/id="pl-manage-save"/ a\
+                <!-- RUNE_YOUTUBE_MOD -->\
+                <i id="pl-import-youtube" class="fa fa-youtube-play" title="Import a playlist or video from youtube." data-toggle="modal" data-target="#modal-pl-youtube"></i>\
+                <!-- END_RUNE_YOUTUBE_MOD -->
+	' $file
+fi
+
 file=/srv/http/assets/js/runeui.js
 echo $file
 	sed -i $'/\/\/ sort Queue entries/ i\
