@@ -26,7 +26,8 @@ sed -i $'/<!-- RUNE_YOUTUBE_MOD -->/,/<!-- END_RUNE_YOUTUBE_MOD -->/ d' $file
 file=/srv/http/app/templates/playback.php
 
 # for RuneUI Enhancement
-sed -i '/<!-- RUNE_YOUTUBE_MOD -->/,/<!-- END_RUNE_YOUTUBE_MOD -->/ d' /srv/http/app/templates/playbackcustom.php
+file=/srv/http/app/templates/playbackcustom.php
+[[ -e $file ]] && sed -i '/<!-- RUNE_YOUTUBE_MOD -->/,/<!-- END_RUNE_YOUTUBE_MOD -->/ d' $file
 
 file=/srv/http/assets/js/runeui.js
 echo $file
