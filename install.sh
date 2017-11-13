@@ -9,9 +9,6 @@ alias=RuneYoutube
 ### template - function: start message, installed check
 installstart $@
 
-### template - function: free space check (needed kb for install)
-checkspace 12000
-
 ### template - function: get repository zip and extract to system directories
 getinstallzip
 
